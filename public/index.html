@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>FEC Demo</title>
+  </head>
+  <body>
+    <!-- <div id="Info"></div>
+    <div id="CountDown"></div>
+    <div id="Related"></div> -->
+    <div id="Wrapper">
+      <div class="box" id="Gallery"></div>
+      <div class="box" id="Description"></div>
+      <div class="box" id="Reviews"></div>
+      <div class="box" id="Booking"></div>
+
+    </div>
+   
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="http://localhost:3002/:id/bundle.js"></script>
+    <script src="http://localhost:3001/homes/:homeId/app.js"></script>
+    <script src="http://localhost:3004/public/:id/dist/bundle.js"></script>
+    <script src="http://localhost:3003/home/:id/bundle.js"></script>
+    
+     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      let homeId = window.location.pathname.match(/[0-9]+/g)[0];
+      ReactDOM.render(
+        React.createElement(Gallery, {homeId: homeId}),
+        document.getElementById('Gallery')
+      );
+      ReactDOM.render(
+        React.createElement(Description, {homeId: homeId}),
+        document.getElementById('Description')
+      );
+      ReactDOM.render(
+        React.createElement(Reviews, {homeId: homeId}),
+        document.getElementById('Reviews')
+      );
+      ReactDOM.render(
+        React.createElement(Booking, {homeId: homeId}),
+        document.getElementById('Booking')
+      );
+    </script>
+  </body>
+</html>

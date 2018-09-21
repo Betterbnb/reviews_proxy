@@ -1,0 +1,30 @@
+{
+    "routes": [
+        {
+            "route": "/descriptions/:id",
+            "address": "http://localhost:3002"
+          },
+          {
+              "route":"/homes/:homeId/reviews/:id",
+              "address":"http://localhost:3001"
+             
+          },
+          { 
+              "route":"/reviews/:queried/:query",
+              "address":"http://localhost:3001"
+          
+           },
+
+         {
+             "route":"/house/:id",
+            "address":"http://localhost:3004"
+          },
+          {
+            "route": "/homes/:id/images",
+            "address":"http://localhost:3003"
+          }
+          
+    ]
+  }
+
+ 
