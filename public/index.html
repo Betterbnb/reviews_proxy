@@ -6,23 +6,28 @@
     <title>FEC Demo</title>
   </head>
   <body>
-    <!-- <div id="Info"></div>
-    <div id="CountDown"></div>
-    <div id="Related"></div> -->
-    <div id="Wrapper">
-      <div class="box" id="Gallery"></div>
-      <div class="box" id="Description"></div>
-      <div class="box" id="Reviews"></div>
-      <div class="box" id="Booking"></div>
 
+    <img draggable="false" src="https://s3-us-west-1.amazonaws.com/cloud1314/Screen+Shot+2018-09-20+at+5.29.14+PM.png"> 
+    <div class="Container" id="Container">
+      <div id="Gallery"></div>
+      <div id="Booking"></div>
+      <div id="Description"></div>
+      <div id="RevContainer">
+         <div id="Reviews"></div>
+      </div>
     </div>
-   
+    <div id="Footer">
+        <img src="https://s3-us-west-1.amazonaws.com/cloud1314/Screen+Shot+2018-09-20+at+5.36.16+PM.png">
+    </div>
+
+ 
+    
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
-    <script src="http://localhost:3002/:id/bundle.js"></script>
-    <script src="http://localhost:3001/homes/:homeId/app.js"></script>
-    <script src="http://localhost:3004/public/:id/dist/bundle.js"></script>
-    <script src="http://localhost:3003/home/:id/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/bucketdescription/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/bundlereviews3001/app.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/bucketbooking3004/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/bundle3002/bundle.js"></script>
     
      <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>

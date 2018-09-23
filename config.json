@@ -6,22 +6,26 @@
           },
           {
               "route":"/homes/:homeId/reviews/:id",
-              "address":"http://localhost:3001"
+              "address":"http://reviewsreviews.us-west-1.elasticbeanstalk.com"
              
           },
           { 
-              "route":"/reviews/:queried/:query",
-              "address":"http://localhost:3001"
+              "route":"/reviews/queried/:query",
+              "address":"http://reviewsreviews.us-west-1.elasticbeanstalk.com"
           
+           },
+           { "route": "/reviews/queried/:query/:id",
+            "address": "http://reviewsreviews.us-west-1.elasticbeanstalk.com"
+            
            },
 
          {
              "route":"/house/:id",
-            "address":"http://localhost:3004"
+            "address":"http://booking-server.us-west-1.elasticbeanstalk.com"
           },
           {
             "route": "/homes/:id/images",
-            "address":"http://localhost:3003"
+            "address":"http://betterbnb.us-east-2.elasticbeanstalk.com"
           }
           
     ]

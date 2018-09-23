@@ -1,14 +1,10 @@
 const express = require('express');
-const morgan = require('morgan');
 const path = require('path');
 const app = express();
 const proxy = require('http-proxy-middleware');
-const port = process.env.PORT || 3000;
-
 
 const { routes } = require('./config.json');
 
-app.use(morgan('dev'));
 app.use('/homes/:homeId', express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
@@ -17,12 +13,12 @@ app.use(function(req, res, next) {
   next();
  });
 
- //once a request is made to /homes it is proxied to localhost:3001 with the routes above 
+ //once a request is made to /homes it is proxied to localhost:3001 with the routes in config 
 
 for (route of routes) { ///localhost:3000/homes/100/reviews/100
   app.use(route.route, //will serve up all the routes in the config 
       proxy({  //will receive a request (localhost:3000/descriptions/100)
-          target: route.address, path
+          target: route.address
           // pathRewrite: (path, req) => {
           //   return path; //will send a request to localhost:3002/homes/100/reviews/100 now 
           // }
@@ -35,8 +31,8 @@ for (route of routes) { ///localhost:3000/homes/100/reviews/100
 
 
 
-app.listen(port, () => {
-  console.log(`server running at: http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`server running at: http://localhost:${process.env.PORT}`);
 });
 
 

@@ -1,13 +1,23 @@
-#Wrapper{
-    display: grid
-    
+#Container{
+    position: relative;
+
 }
 
-    .box {
-    grid-column-start: 
-    grid-column-end: 
-    grid-row-start: 
-    grid-row-end:
+#Booking{
+    position:absolute;
+    margin-left:1000px; 
+    z-index:0;
 }
+#Description{
+    position: absolute;
+    transform: scale(1.00);
+    left:15%;
+    
+}
+#Reviews{
+    margin-top: 95%;
+    margin-left: 15%;
+}
+
 
 
